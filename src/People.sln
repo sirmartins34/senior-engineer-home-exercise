@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Api", "People.Api\Pe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Data", "People.Data\People.Data.csproj", "{59B8A189-38BC-41D2-BFF5-60A6555F7EF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Person.Tests", "People.Tests\Person.Tests.csproj", "{8D03B3B7-1447-4624-A267-F6FEA5569140}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "People.Tests", "People.Tests\People.Tests.csproj", "{8D03B3B7-1447-4624-A267-F6FEA5569140}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
