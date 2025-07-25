@@ -189,4 +189,8 @@ to launch the teamcity's agent, run the script:
 to access team-city, use the URL:
     http://localhost:8111/login.html
 
+at team city:
+- I've manually added a project, giving my public github URL, no credentials were given
+  - selected "Import settings from .teamcity/settings.kts and enable synchronization with the VCS repository"
+  - left default values (indicating "main" branch) and clicked "Proceed"
 
