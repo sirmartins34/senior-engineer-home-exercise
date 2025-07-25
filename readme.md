@@ -157,17 +157,17 @@ Docker compose -f compose.ci.yml up -d && open http://localhost:8111
 	$env:DOCKER_BUILDKIT=0
   Once it is built, then I was able to turn the variable back to "1". The files were "Dockerfile" and "Dockerfile.agent"
 
-- to launch the website, run the powershell script:
+- Part 3's description starts up saying "Provide a separate compose.ci.yml file".
+  So for this Part 2, I've renamed the file name to "compose.ci.agent.yml" instead
+
+to launch the website, run the script:
     docker compose up
 
-- to launch the teamcity's agent, run the powershell script:
-    docker compose -f compose.ci.yml up
+to launch the teamcity's agent, run the script:
+    docker compose -f compose.ci.agent.yml up
 
 
 ## Part 3
-
-- Part 3's description starts up saying "Provide a separate compose.ci.yml file".
-  So for the Part 2, I've renamed the file name to "compose.ci.agent.yml" and it will require the use of "docker compose -f compose.ci.agent.yml up" to run it.
 
 - At Docker Desktop (Windows), I've changed: Preferences → Docker Engine
   and I have:
@@ -181,4 +181,12 @@ Docker compose -f compose.ci.yml up -d && open http://localhost:8111
     "experimental": false,
     "insecure-registries": ["localhost:5000"]
   } ``` </pre>
+
+
+to launch the teamcity's agent, run the script:
+    docker compose -f compose.ci.yml up
+
+to access team-city, use the URL:
+    http://localhost:8111/login.html
+
 
