@@ -197,4 +197,5 @@ at team city:
 At the "People API Build", I had to accept my VCS username
 
 
-Unfortunately, I went round and around the TeamCity, Step 2 process. I couldn't figure out the permissions problem to access "/var/run/docker.sock/" directory. I unsuccessfully tried many different approaches.
+Unfortunately, I went round and around the TeamCity, Step 2 process. I couldn't figure out the permissions problem to access "/var/run/docker.sock/" directory, in order to create the docker image. I unsuccessfully tried many different approaches, as you can see under my commits at GitHub.
+The current configurations uses the user "dockerbuilder", group id "docker" (at my local, the id is 999, but some other can be 998).
