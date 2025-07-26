@@ -2,10 +2,7 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-RUN echo "Files in /app:" && ls -la /app
-
-# Switch to root to install packages
-USER root
+RUN echo "Files 1 in /app:" && ls -la /app
 
 # Copy csproj and restore
 COPY People.sln ./
@@ -14,10 +11,16 @@ COPY People.Api/People.Api.csproj ./People.Api/
 COPY People.Data/People.Data.csproj ./People.Data/
 COPY People.Tests/People.Tests.csproj ./People.Tests/
 
+RUN echo "Files 2 in /app:" && ls -la /app
+
 RUN dotnet restore ./People.sln
+
+RUN echo "Files 3 in /app:" && ls -la /app
 
 # Copy everything else and publish
 COPY . ./
+RUN echo "Files 4 in /app:" && ls -la /app
+
 RUN dotnet publish People.Api/People.Api.csproj -c Release -o /app/publish \
     -r linux-musl-x64 --self-contained true \
 #    /p:PublishTrimmed=true \
