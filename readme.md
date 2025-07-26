@@ -197,3 +197,4 @@ at team city:
 At the "People API Build", I had to accept my VCS username
 
 
+Unfortunately, I went round and around the TeamCity, Step 2 process. I couldn't figure out the permissions problem to access "/var/run/docker.sock/" directory. I unsuccessfully tried many different approaches.
