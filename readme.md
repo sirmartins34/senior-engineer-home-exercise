@@ -194,4 +194,6 @@ at team city:
   - selected "Import settings from .teamcity/settings.kts and enable synchronization with the VCS repository"
   - left default values (indicating "main" branch) and clicked "Proceed"
 
-At the "People API Build", I had to accept my VCS username 
+At the "People API Build", I had to accept my VCS username
+
+
