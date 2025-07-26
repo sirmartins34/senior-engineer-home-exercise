@@ -1,6 +1,9 @@
 #  ----------- Build Stage -----------
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
+# Use root user
+USER root
+
 WORKDIR /src
 
 # Copy csproj and restore
