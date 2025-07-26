@@ -2,6 +2,8 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
+RUN echo "Files in /app:" && ls -la /app
+
 # Copy csproj and restore
 COPY People.sln ./
 COPY People.Api/People.Api.csproj ./People.Api/
