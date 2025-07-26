@@ -36,12 +36,10 @@ RUN curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --channel 8
 RUN dotnet --version
 
 # Match docker group ID on host (usually GID 998 or 999)
-ARG DOCKER_GID=999
+ARG DOCKER_GID
+ENV DOCKER_GID=${DOCKER_GID:-998}
 RUN groupadd -g $DOCKER_GID docker || true && \
     usermod -aG docker buildagent
-
-# Optional: verify docker CLI
-RUN docker --version
 
 # Switch to user by UID (TeamCity default)
 USER 1000

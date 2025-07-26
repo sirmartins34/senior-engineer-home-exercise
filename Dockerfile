@@ -4,6 +4,9 @@ WORKDIR /src
 
 RUN echo "Files in /app:" && ls -la /app
 
+# Switch to root to install packages
+USER root
+
 # Copy csproj and restore
 COPY People.sln ./
 COPY People.Api/People.Api.csproj ./People.Api/
